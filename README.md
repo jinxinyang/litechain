@@ -1,30 +1,30 @@
 # litechain
 
 #### 介绍
-让嵌入式设备可以被LLM赋能
+让嵌入式设备可以被LLM赋能  
+使用基础通信方式封装出兼容langchain接口的工具  
+调用底层IO来实现相应的操作  
 
 #### 软件架构
-软件架构说明
-
+三层架构  
+MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)  
+MODULE:Model_IO(输入输出) Retrieval(检索) Chains(链) Memory(内存模块) Agents(代理) Callbacks(回调)  
+APP: 应用链和对应的模块组合成应用  
 
 #### 安装教程
+/*TODO*/
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 使用说明
+/*TODO*/
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  Fork 本仓库  
+2.  新建 Feat_xxx 分支  
+3.  提交代码  
+4.  新建 Pull Request  
 
 
 #### 特技

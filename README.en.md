@@ -1,29 +1,28 @@
 # litechain
 
 #### Description
-让嵌入式设备可以被LLM赋能
+Enabling embedded devices to be empowered by LLMS  
+The basic communication mode is used to encapsulate the tools compatible with the langchain interface  
+The underlying IO is invoked to implement the corresponding operation  
 
 #### Software Architecture
-Software architecture description
+Three-tier architecture  
+MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock)  
+MODULE:Model_IO Retrieval Chains Memory Agents Callbacks  
+APP: An application is composed of an application chain and its corresponding modules  
 
 #### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+/*TODO*/
 
 #### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
+/*TODO*/
 
 #### Contribution
 
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+1.  Fork the repository  
+2.  Create Feat_xxx branch  
+3.  Commit your code  
+4.  Create Pull Request  
 
 
 #### Gitee Feature
