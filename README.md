@@ -7,9 +7,11 @@
 
 #### 软件架构
 三层架构  
-MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)  
+MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)等  
 MODULE:Model_IO(输入输出) Retrieval(检索) Chains(链) Memory(内存模块) Agents(代理) Callbacks(回调)  
-APP: 应用链和对应的模块组合成应用  
+APP: 应用链和对应的模块组合成应用
+
+每层架构中都会有个Plugins 可以是第三方库,也可以是自定义的模块 
 
 #### 安装教程
 /*TODO*/

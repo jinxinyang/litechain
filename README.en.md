@@ -7,10 +7,11 @@ The underlying IO is invoked to implement the corresponding operation
 
 #### Software Architecture
 Three-tier architecture  
-MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock)  
+MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock), etc
 MODULE:Model_IO Retrieval Chains Memory Agents Callbacks  
 APP: An application is composed of an application chain and its corresponding modules  
 
+There are Plugins in each layer of the architecture, which can be third-party libraries or custom modules
 
 #### Installation
 /*TODO*/
