@@ -1,10 +1,15 @@
 # litechain
 
 #### Description
-让嵌入式设备可以被LLM赋能
+Enabling embedded devices to be empowered by LLMS
+The basic communication mode is used to encapsulate the tools compatible with the langchain interface
+The underlying IO is invoked to implement the corresponding operation
 
 #### Software Architecture
-Software architecture description
+Three-tier architecture
+MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock)
+MODULE:Model_IO Retrieval Chains Memory Agents Callbacks
+APP: An application is composed of an application chain and its corresponding modules
 
 #### Installation
 
