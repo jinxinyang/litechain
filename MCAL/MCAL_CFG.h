@@ -6,19 +6,29 @@
 #define X86 0
 #define STM32F10X 1
 #define ESP32 2
-#define PLATFORM_CONFIG X86
+#define CALTERAH 3
+#define PLATFORM_CONFIG CALTERAH
+
 
 #if PLATFORM_CONFIG == X86
-#include "x86/MCAL_Core_CFG.h"
-#include "x86/MCAL_CAN_CFG.h"
-#include "x86/MCAL_UART_CFG.h"
-#include "x86/MCAL_EEPROM_CFG.h"
-#include "x86/MCAL_Flash_CFG.h"
-#include "x86/MCAL_Etherent_CFG.h"
+#include "X86/MCAL_Core.h"
+#include "X86/MCAL_CAN.h"
+#include "X86/MCAL_UART.h"
+#include "X86/MCAL_EEPROM.h"
+#include "X86/MCAL_Flash.h"
+#include "X86/MCAL_Etherent.h"
 #elif PLATFORM_CONFIG == STM32F10X
 
 #elif PLATFORM_CONFIG == ESP32
 
+#elif PLATFORM_CONFIG == CALTERAH
+#include "CALTERAH/Core/MCAL_Core.h"
+#include "CALTERAH/EEPROM/MCAL_EEPROM.h"
+#include "CALTERAH/Flash/MCAL_Flash.h"
+#include "CALTERAH/UART/MCAL_UART.h"
+#include "CALTERAH/CAN/MCAL_CAN.h"
+#include "CALTERAH/Ethernet/MCAL_Ethernet.h"
+#include "CALTERAH/COM/MCAL_COM.h"
 #else
 #error "Please define the platform you are using"
 #endif
