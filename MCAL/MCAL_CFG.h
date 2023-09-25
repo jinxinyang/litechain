@@ -6,7 +6,7 @@
 #define X86 0
 #define STM32F10X 1
 #define ESP32 2
-#define CALTERAH 3
+#define CALTERAH 3//只是测试串口用的//Just for testing the serial port
 #define PLATFORM_CONFIG CALTERAH
 
 
