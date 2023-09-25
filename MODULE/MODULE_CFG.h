@@ -8,4 +8,13 @@
 #include "Retrieval/MODULE_Retrieval_CFG.h"
 #include "Moldel_IO/MODULE_Model_IO_CFG.h"
 
+
+
+#define SOCKET_LEVEL 0
+#define HTTP_LEVEL 1
+#define LOCAL_LEVEL 2
+
+#define LLM_COM_PROTOCOL SOCKET_LEVEL
+
+
 #endif/*MODULE_CFG_H*/
