@@ -1,7 +1,8 @@
 /*
-    * MCAL_UART.c
-    *
-    *  Created on: 2023.9.22
+* @file  MCAL_COM.c
+* @brief 用于通信的接口
+         An interface for communication   
+* @date 2021.9.22
 */
 #include "MCAL_COM.h"
 

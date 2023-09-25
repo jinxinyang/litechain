@@ -1,7 +1,6 @@
 #ifndef MODULE_CFG_H
 #define MODULE_CFG_H
 
-
 #include "Memory/MODULE_Memory_CFG.h"
 #include "Chains/MODULE_Chains_CFG.h"
 #include "Callbacks/MODULE_Callbacks_CFG.h"
