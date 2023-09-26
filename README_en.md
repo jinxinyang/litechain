@@ -55,13 +55,19 @@ Local large model supporting the server program
 
 Implementation of cloud multi-model protocol:  
 chatgpt  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
-A word of wisdom  
-Tong Yi Qian asked  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">   
+文心一言  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
+通义千问  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128"> 
+
 
 Hardware support:  
-stm32f103+air742UG-&gt; 4G  
-esp32-&gt; wifi  
+stm32f103+air742UG->4G  
+esp32-c3->wifi  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="合宙esp32 c3" width="256" height="256">  
 
 Vector databases support:  
 Milvus(remote storage matching)  

@@ -29,13 +29,16 @@ http协议统一接口
 chatgpt  
 <img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">   
 文心一言  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
 通义千问  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">   
 
 硬件支持:  
 stm32f103+air742UG->4G  
 esp32 c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="合宙esp32 c3" width="562" height="413">  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="合宙esp32 c3" width="256" height="256">  
 
 向量数据库支持:  
 Milvus(远端存储匹配)  
