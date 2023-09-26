@@ -24,6 +24,7 @@ http协议统一接口
 
 云端多模型协议实现:  
 chatgpt  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128"> 
 chatgml  
 文心一言  
 通义千问  
