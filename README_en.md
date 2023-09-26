@@ -1,5 +1,7 @@
 # litechain
 
+
+**English** | [中文](README_cn.md)
 #### Introduction  
 
 Enabling embedded devices to be empowered by LLMS  
@@ -8,7 +10,8 @@ The underlying IO is invoked to implement the corresponding operation
 
 
 #### Software Architecture  
-Three-tier architecture  
+Four-tier architecture  
+HAL: Drivers for different chip models are uniformly placed in the corresponding MCAL folder  
 MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock), etc  
 MODULE:Model_IO Retrieval Chains Memory Agents Callbacks  
 APP: An application is composed of an application chain and its corresponding modules  

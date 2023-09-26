@@ -1,12 +1,16 @@
-# litechain
+# <span style="font-size:32px;">litechain</span>
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/litechain.png" alt="litechain" width="256" height="256">
+
+**中文** | [English](README_en.md)
 #### 介绍  
 让嵌入式设备可以被LLM赋能  
 使用基础通信进行连接,构造出类似langchain的框架  
 调用底层IO来实现相应的操作  
 
 #### 软件架构  
-三层架构  
+四层架构 
+HAL:针对不芯片型号的驱动,统一放在对应的MCAL的文件夹下面  
 MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)等  
 MODULE:Model_IO(输入输出) Retrieval(检索) Chains(链) Memory(内存模块) Agents(代理) Callbacks(回调)   
 APP: 应用链和对应的模块组合成应用  
@@ -24,7 +28,7 @@ http协议统一接口
 
 云端多模型协议实现:  
 chatgpt  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128"> 
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
 文心一言  
 通义千问  
