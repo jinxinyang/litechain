@@ -31,7 +31,7 @@ chatgml
 硬件支持:  
 stm32f103+air742UG->4G  
 esp32 c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/blob/master/images/esp32.png" alt="合宙esp32 c3" width="200" height="200">
+<img src="https://gitee.com/jinxinyang/litechain/blob/master/images/esp32.png" alt="合宙esp32 c3" width="562" height="413">  
 
 向量数据库支持:  
 Milvus(远端存储匹配)  

@@ -35,7 +35,7 @@ Tong Yi Qian asked
 Hardware support:  
 stm32f103+air742UG-&gt->4G  
 esp32-c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/blob/master/images/esp32.png" alt="合宙esp32 c3" width="200" height="200">  
+<img src="https://gitee.com/jinxinyang/litechain/blob/master/images/esp32.png" alt="合宙esp32 c3" width="562" height="413">    
 
 Vector databases support:  
 Milvus(remote storage matching)  
