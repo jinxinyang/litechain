@@ -28,40 +28,17 @@ Context memory management:
 A unified interface to the http protocol  
 
 LAN LLM access:  
-Local large model supporting the server program  
-
-Implementation of cloud multi-model protocol:  
-chatgpt  
-chatgml  
-A word of wisdom  
-Tong Yi Qian asked  
-
-Hardware support:  
-stm32f103+air742UG-&gt->4G  
-esp32-c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/blob/master/images/esp32.png" alt="合宙esp32 c3" width="562" height="413">    
-
-Vector databases support:  
-Milvus(remote storage matching)  
-
-Implementation of chain:  
-
-Context memory management:  
-
-A unified interface to the http protocol  
-
-LAN LLM access:  
-Local large model supporting the server program  
+Local large model supporting the server program   
 
 Implementation of cloud multi-model protocol:  
 chatgpt  
 <img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">   
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">  
 文心一言  
 <img src="https://gitee.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
 通义千问  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128"> 
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">  
 
 
 Hardware support:  
