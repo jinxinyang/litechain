@@ -9,9 +9,8 @@
 调用底层IO来实现相应的操作  
 
 #### 软件架构  
-四层架构 
-HAL:针对不芯片型号的驱动,统一放在对应的MCAL的文件夹下面  
-MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)等  
+三层架构  
+MCAL: Etherent(网口) CAN  UART  Flash  RAM  EEPROM Core(包含中断和时钟)等 ,使用IC底层库进行标准化封装  
 MODULE:Model_IO(输入输出) Retrieval(检索) Chains(链) Memory(内存模块) Agents(代理) Callbacks(回调)   
 APP: 应用链和对应的模块组合成应用  
 

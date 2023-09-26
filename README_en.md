@@ -11,8 +11,8 @@ The underlying IO is invoked to implement the corresponding operation
 
 
 #### Software Architecture  
-Four-tier architecture  
-HAL: Drivers for different chip models are uniformly placed in the corresponding MCAL folder  
+Three-tier architecture  
+MCAL: Etherent(network port) CAN UART Flash RAM EEPROM Core(including interrupt and clock), etc., using the IC underlying library for standardized packaging  
 MCAL: Etherent CAN UART Flash RAM EEPROM Core(including interrupt and clock), etc  
 MODULE:Model_IO Retrieval Chains Memory Agents Callbacks  
 APP: An application is composed of an application chain and its corresponding modules  
