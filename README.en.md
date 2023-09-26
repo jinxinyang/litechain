@@ -1,10 +1,11 @@
 # litechain
 
-#### Introduction
+#### Introduction  
 
 Enabling embedded devices to be empowered by LLMS  
 The basic communication is used to connect and construct a LangChain-like framework  
 The underlying IO is invoked to implement the corresponding operation  
+
 
 #### Software Architecture  
 Three-tier architecture  
@@ -38,8 +39,29 @@ esp32-c3->wifi
 Vector databases support:  
 Milvus(remote storage matching)  
 
+Implementation of chain:  
 
-#### Installation  
+Context memory management:  
+
+A unified interface to the http protocol  
+
+LAN LLM access:  
+Local large model supporting the server program  
+
+Implementation of cloud multi-model protocol:  
+chatgpt  
+chatgml  
+A word of wisdom  
+Tong Yi Qian asked  
+
+Hardware support:  
+stm32f103+air742UG-&gt; 4G  
+esp32-&gt; wifi  
+
+Vector databases support:  
+Milvus(remote storage matching)  
+
+#### Installation   
 /*TODO*/
 
 #### Instructions  
