@@ -1,0 +1,7 @@
+#ifndef HAPTIC_RESPONSE_H
+#define HAPTIC_RESPONSE_H
+
+
+
+
+#endif  // HAPTIC_RESPONSE_H

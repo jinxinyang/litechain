@@ -5,9 +5,9 @@
 /*Chip Platform Definition*/
 #define X86 0
 #define STM32F10X 1
-#define ESP32 2
+#define ESP32_C3 2
 #define CALTERAH 3//只是测试串口用的//Just for testing the serial port
-#define PLATFORM_CONFIG CALTERAH
+#define PLATFORM_CONFIG ESP32_C3
 
 
 #if PLATFORM_CONFIG == X86
@@ -19,8 +19,14 @@
 #include "X86/MCAL_Etherent.h"
 #elif PLATFORM_CONFIG == STM32F10X
 
-#elif PLATFORM_CONFIG == ESP32
-
+#elif PLATFORM_CONFIG == ESP32_C3
+#include "ESP32_C3/Core/MCAL_Core.h"
+#include "ESP32_C3/EEPROM/MCAL_EEPROM.h"
+#include "ESP32_C3/Flash/MCAL_Flash.h"
+#include "ESP32_C3/UART/MCAL_UART.h"
+#include "ESP32_C3/CAN/MCAL_CAN.h"
+#include "ESP32_C3/Ethernet/MCAL_Ethernet.h"
+#include "ESP32_C3/Ethernet/MCAL_Wifi.h"
 #elif PLATFORM_CONFIG == CALTERAH
 #include "CALTERAH/Core/MCAL_Core.h"
 #include "CALTERAH/EEPROM/MCAL_EEPROM.h"
@@ -28,7 +34,6 @@
 #include "CALTERAH/UART/MCAL_UART.h"
 #include "CALTERAH/CAN/MCAL_CAN.h"
 #include "CALTERAH/Ethernet/MCAL_Ethernet.h"
-#include "CALTERAH/COM/MCAL_COM.h"
 #else
 #error "Please define the platform you are using"
 #endif
