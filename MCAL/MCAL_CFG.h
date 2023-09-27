@@ -26,7 +26,7 @@
 #include "ESP32_C3/UART/MCAL_UART.h"
 #include "ESP32_C3/CAN/MCAL_CAN.h"
 #include "ESP32_C3/Ethernet/MCAL_Ethernet.h"
-#include "ESP32_C3/Ethernet/MCAL_Wifi.h"
+#include "ESP32_C3/WIFI/MCAL_Wifi.h"
 #elif PLATFORM_CONFIG == CALTERAH
 #include "CALTERAH/Core/MCAL_Core.h"
 #include "CALTERAH/EEPROM/MCAL_EEPROM.h"
