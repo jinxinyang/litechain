@@ -19,7 +19,7 @@ APP: An application is composed of an application chain and its corresponding mo
 
 There are Plugins in each layer of the architecture, which can be third-party libraries or custom modules  
 
-#### Development plan  
+#### Development plan    
 
 Implementation of chain:  
 
