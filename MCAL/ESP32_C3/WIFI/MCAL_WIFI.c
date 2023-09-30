@@ -5,6 +5,7 @@
  *      Author: jinxinyang
  */
 #include <string.h>
+#include <stdint.h>
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_system.h"
@@ -21,6 +22,7 @@
 #include "lwip/dns.h"
 #include "esp_timer.h"
 #include "sdkconfig.h"
+#include "MCAL_WIFI.h"
 
 #define MAX_SOCKETS 16
 #define RESULT_BUFFER_SIZE 16*1024
@@ -43,7 +45,7 @@ int socket_init(const char* url)
     struct addrinfo *res;
     int s;
     int err = getaddrinfo(url, "80", &hints, &res);
-    if(err != 0 || res == NULL) {
+    if(err != 0 || res == 0) {
         ESP_LOGE(TAG, "DNS lookup failed err=%d res=%p", err, res);
         return -1;
     }
@@ -84,13 +86,13 @@ char* socket_read(int s)
     // 使用lwip_setsockopt()函数设置超时时间
     if(lwip_setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
         ESP_LOGE(TAG, "... failed to set socket read timeout");
-        return NULL;
+        return 0;
     }
 
-    char recv_buf[2048];
+    char recv_buf[MAX_SINGLE_DATA_LENGTH];
     int i = 0;
     int r = 0;
-    size_t total_size = 0;
+    int total_size = 0;
     static char result[RESULT_BUFFER_SIZE];  // 创建全局的静态缓冲区
     do {
         memset(recv_buf, 0, sizeof(recv_buf));
@@ -106,7 +108,8 @@ char* socket_read(int s)
         } else if (r < 0) {
             break;
         }
-    } while(r == 2048);
+	ESP_LOGE(TAG, "get data%d",r);
+    } while(r == MAX_SINGLE_DATA_LENGTH-1);
 
     result[total_size] = '\0';  // 在结果缓冲区末尾添加字符串结束符
 

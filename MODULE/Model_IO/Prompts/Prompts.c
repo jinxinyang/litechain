@@ -8,6 +8,8 @@
 #include "Prompts.h"
 #include <string.h>
 #include <stdio.h>
+#include <stdarg.h>
+
 
 // 函数声明
 // Function declaration

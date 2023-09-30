@@ -4,17 +4,23 @@
     *  Created on: 2023.9.22
 */
 
-int UART_Init(unsigned int baud)
-{
+#include "MCAL_UART.h"
 
+int UART_Init(int baud);
+int UART_SendString(char *str,int len);
+int UART_ReceiveString(char *str);
+
+int UART_Init(int baud)
+{
+	return 0;
 }
 
-int UART_SendString(unsigned char *str,unsigned int len)
+int UART_SendString(char *str,int len)
 {
-
+	return 0;
 }
 
-int UART_ReceiveString(unsigned char *str,unsigned int *len)
+int UART_ReceiveString(char *str)
 {
-
+	return 0;
 }

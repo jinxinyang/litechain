@@ -6,14 +6,16 @@
 */
 #include "LLM_Base.h"
 #include "LLM_Openai.h"
+#include "../../Plugins/Plugins_http.h"
+#include <stdio.h>
 
 static LLM Openai_llm;
+// 定义足够大的空间给headers
+static char headers[256];
+// 定义足够大的空间给data
+static char data[GPT_3_5_TURBO_16K_0613_MAX_TOKEN];
 
-
-char* Openai_Template(char* data)
-{
-    
-}
+LLM *Openai_init(const char *llm_type,float temperature,uint16_t max_token,const char *api_key,const char *api_base);
 
 /******************************************************************************************
  * Function: GPT_3_5_TURBO_16K_0613_RUN
@@ -35,31 +37,32 @@ char* Openai_Template(char* data)
  *        0: Success
  *       -1: Failure
  * *******************************************************************************************/
-static int Openai_run(char *input,char *output, uint32_t *output_len)
+static char *Openai_run(char *api_type,char *input)
 {
-    int ret = 0;
     //检查输入长度
+    int input_len = strlen(input);
     //Check the input length
-    if (input_len > 0 && input_len < GPT_3_5_TURBO_16K_0613_MAX_TOKEN)
+    if (input_len < 0 || input_len > GPT_3_5_TURBO_16K_0613_MAX_TOKEN)
     {
-        return -1;
+        return 0;
     }
-    //TODO:Here's a wrapper around the http transit api
+    //获取配置,这里可以实现多个实例自动获取
+    llm_config cfg = Openai_llm.config;
+
+
+
+    // 拼接headers字符串
+    snprintf(headers, sizeof(headers), "Content-Type: application/json\r\nAuthorization: Bearer %s\r\n", cfg.api_key);
+
+    // 拼接data字符串
+    snprintf(data, sizeof(data), "{\"model\": \"%s\", \"messages\": [{\"role\": \"system\", \"content\": "
+             "\"You are a helpful assistant.\"}, {\"role\": \"user\", \"content\": \"%s\"}]}", cfg.llm_type, input);
 
     //发送请求
     //Send request
-    ret = COM_SendString(input,input_len);
-    if (ret != 0)
-    {
-        ret = -1;
-    }
-    else
-    {
-        //接收响应
-        //Receive response
-        ret = COM_ReceiveString(output,output_len);
-    }
-    return ret;
+    char * output = HTTP_Post(cfg.api_base,api_type,headers,data);
+
+    return output;
 }
 /******************************************************************************************
  * Function: Openai_init
@@ -77,22 +80,27 @@ static int Openai_run(char *input,char *output, uint32_t *output_len)
  * Return Value:
  *  - LLM *: 成功
  *           Success
- *  - NULL: 失败
+ *  - 0: 失败
  *          Failure
  * *******************************************************************************************/
-LLM *Openai_init(uint8_t *llm_type,float temperature,uint16_t max_token,uint8_t *api_key,uint8_t *api_base)
+LLM *Openai_init(const char *llm_type,float temperature,uint16_t max_token,const char *api_key,const char *api_base)
 {
+
     //检测参数长度是否超标
     //Check if the parameter length is exceeded
-    if(strlen(api_key)>MAX_API_KEY_LEN||strlen(api_base)>MAX_API_BASE_LEN)
+	int type_len = strlen(llm_type);
+	int key_len = strlen(api_key);
+	int base_len = strlen(api_base);
+    if((type_len>MAX_LLM_NAME_LEN)||(key_len>MAX_API_KEY_LEN||base_len>MAX_API_BASE_LEN))
     {
-        return NULL;
+        return 0;
     }
 
-    Openai_llm->run = Openai_run;
-    Openai_llm->config.llm_type = llm_type;
-    Openai_llm->config.temperature = temperature;
-    Openai_llm->config.maxTokens = max_token;
-
+    Openai_llm.run = Openai_run;
+    memcpy(Openai_llm.config.llm_type, llm_type, type_len);
+    memcpy(Openai_llm.config.api_key, api_key, key_len);
+    memcpy(Openai_llm.config.api_base, api_base, base_len);
+    Openai_llm.config.temperature=temperature;
+    Openai_llm.config.maxTokens=max_token;
     return &Openai_llm;
 }

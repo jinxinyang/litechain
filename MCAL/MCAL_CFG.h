@@ -9,7 +9,6 @@
 #define CALTERAH 3//只是测试串口用的//Just for testing the serial port
 #define PLATFORM_CONFIG ESP32_C3
 
-
 #if PLATFORM_CONFIG == X86
 #include "X86/MCAL_Core.h"
 #include "X86/MCAL_CAN.h"
