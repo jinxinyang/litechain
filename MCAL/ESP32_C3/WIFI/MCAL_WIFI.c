@@ -81,7 +81,7 @@ char* socket_read(int s)
 {
     // 定义超时时间
     struct timeval tv;
-    tv.tv_sec = 5;  // 设置5秒超时
+    tv.tv_sec = SOKET_RESPONSE_TIME;  // 设置超时
     tv.tv_usec = 0;
     // 使用lwip_setsockopt()函数设置超时时间
     if(lwip_setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
@@ -94,9 +94,10 @@ char* socket_read(int s)
     int r = 0;
     int total_size = 0;
     static char result[RESULT_BUFFER_SIZE];  // 创建全局的静态缓冲区
+
     do {
-        memset(recv_buf, 0, sizeof(recv_buf));
-        r = read(s, recv_buf, sizeof(recv_buf)-1);
+    	memset(recv_buf, 0, sizeof(recv_buf));
+        r = read(s, recv_buf, MAX_SINGLE_DATA_LENGTH);
         if (r > 0) {
             if (total_size + r > RESULT_BUFFER_SIZE - 1) {  // 检查是否超出缓冲区大小
                 ESP_LOGE(TAG, "Result buffer overflow");
@@ -108,8 +109,8 @@ char* socket_read(int s)
         } else if (r < 0) {
             break;
         }
-	ESP_LOGE(TAG, "get data%d",r);
-    } while(r == MAX_SINGLE_DATA_LENGTH-1);
+
+    } while(r == MAX_SINGLE_DATA_LENGTH);
 
     result[total_size] = '\0';  // 在结果缓冲区末尾添加字符串结束符
 
