@@ -23,9 +23,10 @@
 #include "esp_timer.h"
 #include "sdkconfig.h"
 #include "MCAL_WIFI.h"
+#include "../Core/MCAL_Core.h"
 
 #define MAX_SOCKETS 16
-#define RESULT_BUFFER_SIZE 16*1024
+#define RESULT_BUFFER_SIZE 16*1024*5
 
 static const char *TAG = "example";
 
@@ -84,7 +85,8 @@ char* socket_read(int s)
     tv.tv_sec = SOKET_RESPONSE_TIME;  // 设置超时
     tv.tv_usec = 0;
     // 使用lwip_setsockopt()函数设置超时时间
-    if(lwip_setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+    if(lwip_setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0)
+    {
         ESP_LOGE(TAG, "... failed to set socket read timeout");
         return 0;
     }
@@ -93,24 +95,42 @@ char* socket_read(int s)
     int i = 0;
     int r = 0;
     int total_size = 0;
+    char first_read = 0;
     static char result[RESULT_BUFFER_SIZE];  // 创建全局的静态缓冲区
 
     do {
     	memset(recv_buf, 0, sizeof(recv_buf));
+    	sleep_ms(500);
         r = read(s, recv_buf, MAX_SINGLE_DATA_LENGTH);
-        if (r > 0) {
-            if (total_size + r > RESULT_BUFFER_SIZE - 1) {  // 检查是否超出缓冲区大小
+        ESP_LOGE(TAG, "recv data:%d\n",r);
+        if (r > 0)
+        {
+            if (total_size + r > RESULT_BUFFER_SIZE - 1)
+            {  // 检查是否超出缓冲区大小
                 ESP_LOGE(TAG, "Result buffer overflow");
                 break;
             }
             memcpy(result + total_size, recv_buf, r);
             total_size += r;
             i += r;
-        } else if (r < 0) {
+        }
+        else if (r < 0)
+        {
             break;
         }
 
-    } while(r == MAX_SINGLE_DATA_LENGTH);
+//        if(first_read == 0)
+//        {
+//        	first_read = 1;
+//			tv.tv_sec = SOKET_SINGLE_RESPONSE_TIME;  // 设置超时
+//			tv.tv_usec = 0;
+//			// 使用lwip_setsockopt()函数设置超时时间
+//			if(lwip_setsockopt(s, SOL_SOCKET, SO_RCVTIMEO, &tv, sizeof(tv)) < 0) {
+//				ESP_LOGE(TAG, "... failed to set socket read timeout");
+//				break;
+//			}
+//        }
+    } while(r==MAX_SINGLE_DATA_LENGTH);
 
     result[total_size] = '\0';  // 在结果缓冲区末尾添加字符串结束符
 

@@ -10,7 +10,7 @@
 
 #include "../../MCAL_CFG.h"
 
-#define MAX_SINGLE_DATA_LENGTH 64
+#define MAX_SINGLE_DATA_LENGTH 512
 
 
 extern int socket_init(const char* url);

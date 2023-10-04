@@ -9,7 +9,8 @@
 #define CALTERAH 3//只是测试串口用的//Just for testing the serial port
 #define PLATFORM_CONFIG ESP32_C3
 
-#define SOKET_RESPONSE_TIME 40
+#define SOKET_RESPONSE_TIME 20
+#define SOKET_SINGLE_RESPONSE_TIME 1
 
 
 #if PLATFORM_CONFIG == X86

@@ -35,8 +35,6 @@ char* HTTP_Post(const char* url,const char* web_path,const char* headers,const c
         return 0;
     }
 
-    //close(s);
-
     return socket_read(s);
 }
 
