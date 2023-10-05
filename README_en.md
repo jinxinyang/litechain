@@ -21,6 +21,8 @@ There are Plugins in each layer of the architecture, which can be third-party li
 
 #### Development plan    
 
+Streaming output parsing can reduce resource requirements
+
 Implementation of chain:  
 
 Context memory management:  
