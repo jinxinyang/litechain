@@ -13,8 +13,8 @@
 #include "Output_parsers.h"
 #include "cJSON.h"
 
+static cJSON* json[MAX_JSON_LAYER];
 static char valuestring_buff[MAX_JSON_VALUE_LEN];
-
 
 static bool isNumeric(const char* str)
 {
@@ -87,7 +87,6 @@ char* OutputParserJson(char* input,const char* key,...)
     }
 
     int LayerNu = 0;
-    cJSON* json[MAX_JSON_LAYER];
     json[LayerNu] = root;
 
     while (key_str != NULL)
@@ -115,7 +114,9 @@ char* OutputParserJson(char* input,const char* key,...)
         key_str = va_arg(args, const char*);
     }
     va_end(args);
+
     strcpy(valuestring_buff, json[LayerNu]->valuestring);
+
     cJSON_Delete(root);
     return valuestring_buff;
 }
