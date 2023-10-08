@@ -42,7 +42,9 @@ chatgml
 Hardware support:  
 stm32f103+air742UG->4G  
 esp32-c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="合宙esp32 c3" width="256" height="256">  
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
+Raspberry RP2040 ->RJ45   
+<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">  
 
 Vector databases support:  
 Milvus(remote storage matching)  
