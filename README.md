@@ -1,6 +1,6 @@
 # litechain
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/litechain.png" alt="litechain" width="256" height="256">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/jinxinyang/litechain/raw/master/images/litechain.png" alt="litechain" width="256" height="256">
 
 **English** | [中文](README_cn.md)  
 #### Introduction  
@@ -30,21 +30,21 @@ Local large model supporting the server program
 
 Implementation of cloud multi-model protocol:  
 chatgpt  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">  
 文心一言  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
 通义千问  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">  
 
 
 Hardware support:  
 stm32f103+air742UG->4G  
 esp32-c3->wifi  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
 Raspberry RP2040 ->RJ45   
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">  
 
 Vector databases support:  
 Milvus(remote storage matching)  
@@ -66,8 +66,8 @@ Milvus(remote storage matching)
 #### Gitee Feature  
 
 1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md  
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)  
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)  
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)  
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)  
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)  
+2.  Gitee blog [blog.github.com](https://blog.github.com)  
+3.  Explore open source project [https://github.com/explore](https://github.com/explore)  
+4.  The most valuable open source project [GVP](https://github.com/gvp)  
+5.  The manual of Gitee [https://github.com/help](https://github.com/help)  
+6.  The most popular members  [https://github.com/gitee-stars/](https://github.com/gitee-stars/)  
