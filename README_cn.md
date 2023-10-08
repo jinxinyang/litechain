@@ -31,20 +31,20 @@ chain的实现:
 
 云端多模型协议实现:  
 chatgpt  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/chatgpt.png" alt="chatgpt" width="256" height="128">  
 chatgml  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">   
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/chatgml.png" alt="chatgpt" width="256" height="128">   
 文心一言  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/wenxinyiyan.png" alt="chatgpt" width="256" height="128">   
 通义千问  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">   
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/tongyiqianwan.png" alt="chatgpt" width="256" height="128">   
 
 硬件支持计划:  
 stm32f103+air742UG->4G  
 esp32 c3->wifi achieve  
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
 Raspberry RP2040 ->RJ45   
-<img src="https://gitee.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">   
+<img src="https://github.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">   
 
 向量数据库支持:  
 Milvus(远端存储匹配)  
@@ -75,8 +75,8 @@ LED
 #### 特技    
 
 1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md  
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)  
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目  
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目  
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)  
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)  
+2.  Gitee 官方博客 [blog.github.com](https://blog.github.com)  
+3.  你可以 [https://github.com/explore](https://github.com/explore) 这个地址来了解 Gitee 上的优秀开源项目  
+4.  [GVP](https://github.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目  
+5.  Gitee 官方提供的使用手册 [https://github.com/help](https://github.com/help)  
+6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://github.com/gitee-stars/](https://github.com/gitee-stars/)  
