@@ -13,6 +13,9 @@
 #include "Output_parsers.h"
 #include "cJSON.h"
 
+static char valuestring_buff[MAX_JSON_VALUE_LEN];
+
+
 static bool isNumeric(const char* str)
 {
     if (str == NULL || *str == '\0')
@@ -104,7 +107,7 @@ char* OutputParserJson(char* input,const char* key,...)
             printf("json:%s\n",key_str);
         }
 
-        if (json == NULL)
+        if (json[LayerNu] == NULL)
         {
             break;
         }
@@ -112,85 +115,7 @@ char* OutputParserJson(char* input,const char* key,...)
         key_str = va_arg(args, const char*);
     }
     va_end(args);
+    strcpy(valuestring_buff, json[LayerNu]->valuestring);
     cJSON_Delete(root);
-#if 0
-    cJSON* choices_array = cJSON_GetObjectItem(json, "choices");
-    if (choices_array == NULL || !cJSON_IsArray(choices_array))
-    {
-    	printf("Invalid JSON format\n");
-        cJSON_Delete(root);
-    }
-
-    cJSON* choice_object = cJSON_GetArrayItem(choices_array, 0);
-    if (choice_object == NULL || !cJSON_IsObject(choice_object))
-    {
-    	printf("Invalid JSON format\n");
-        cJSON_Delete(root);
-    }
-
-    cJSON* message_object = cJSON_GetObjectItem(choice_object, "message");
-    if (message_object == NULL || !cJSON_IsObject(message_object))
-    {
-    	printf("Invalid JSON format\n");
-        cJSON_Delete(root);
-    }
-
-    cJSON* content_string = cJSON_GetObjectItem(message_object, "content");
-    if (content_string == NULL || !cJSON_IsString(content_string))
-    {
-    	printf("Invalid JSON format\n");
-        cJSON_Delete(root);
-    }
-
-    printf("Content: %s\n", content_string->valuestring);
-    while(1);
-    cJSON_Delete(root);
-
-    //读取可变参数
-    va_list args;
-    va_start(args, key);
-    const char* key_str = key;
-
-    //通过可变参数逐级获取json对象
-    cJSON* json = root;
-    printf("json:%s",json->valuestring);
-
-    while (key_str != NULL)
-    {
-        if (isNumeric(key_str))
-        {
-            json = cJSON_GetArrayItem(json, atoi(key_str));
-            printf("int data");
-            printf("json:%d",atoi(key_str));
-            //printf("json:%s",json->valuestring);
-        }
-        else
-        {
-            json = cJSON_GetObjectItem(json, key_str);
-            printf("string data");
-            printf("json:%s",key_str);
-            //printf("json:%s",json->valuestring);
-
-        }
-
-        if (json == NULL)
-        {
-            break;
-        }
-
-        key_str = va_arg(args, const char*);
-    }
-    va_end(args);
-
-    //清除cJSON使用的内存
-    cJSON_Delete(root);
-
-    //返回结果
-    if (json == NULL)
-    {
-        return NULL;
-    }
-#endif
-
-    return json[LayerNu]->valuestring;
+    return valuestring_buff;
 }
