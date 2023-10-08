@@ -21,13 +21,9 @@ There are Plugins in each layer of the architecture, which can be third-party li
 
 #### Development plan    
 
-Streaming output parsing can reduce resource requirements
-
 Implementation of chain:  
 
 Context memory management:  
-
-A unified interface to the http protocol  
 
 LAN LLM access:  
 Local large model supporting the server program   
