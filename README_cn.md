@@ -41,7 +41,8 @@ chatgml
 
 硬件支持计划:  
 stm32f103+air742UG->4G  
-esp32 c3->wifi achieve  
+esp32-c3->wifi  
+[Test Project](https://github.com/jinxinyang/litechain-esp32_c3)    
 <img src="https://github.com/jinxinyang/litechain/raw/master/images/esp32.png" alt="esp32 c3" width="256" height="256">  
 Raspberry RP2040 ->RJ45   
 <img src="https://github.com/jinxinyang/litechain/raw/master/images/RP2040.png" alt="RP2040" width="256" height="256">   
