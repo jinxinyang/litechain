@@ -60,7 +60,7 @@ static char *Openai_run(char *api_type,char *input)
 
     //发送请求
     //Send request
-    char * output = HTTP_Post(cfg.api_base,api_type,headers,data);
+    char * output = HTTP_Post(cfg.api_base,api_type,"80",headers,data);
 
     return output;
 }

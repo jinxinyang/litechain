@@ -10,9 +10,9 @@
 #include "../../MCAL/MCAL_CFG.h"
 
 char http_buff[MAX_HTTP_POST_LEN];
-char* HTTP_Post(const char* url,const char* web_path,const char* headers,const char* data);
+char* HTTP_Post(const char* url,const char* web_path,const char* port,const char* headers,const char* data);
 
-char* HTTP_Post(const char* url,const char* web_path,const char* headers,const char* data)
+char* HTTP_Post(const char* url,const char* web_path,const char* port,const char* headers,const char* data)
 {
 	int s;
     sprintf(http_buff,
@@ -22,7 +22,7 @@ char* HTTP_Post(const char* url,const char* web_path,const char* headers,const c
             "Content-Length: %zu\r\n"
             "\r\n"
             "%s",
-			web_path,url,"80",headers, strlen(data), data);
+			web_path,url,port,headers, strlen(data), data);
 
     s=socket_init(url);
     if(s<0)
