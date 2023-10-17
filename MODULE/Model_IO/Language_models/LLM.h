@@ -10,6 +10,6 @@
 
 
 #include "LLM_Openai.h"
-
+#include "LLM_Chatgml.h"
 
 #endif /* LITECHAIN_MODULE_MODEL_IO_LANGUAGE_MODELS_LLM_H_ */
